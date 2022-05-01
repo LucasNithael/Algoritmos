@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int primo(long long n){
-    long long d=1, qtd;
+    long long d=2, qtd=1;
     while (d!=(n/2+1) && qtd==1)
     {
         if(n%d++==0){
@@ -19,8 +19,8 @@ int main(){
     long long n;
     scanf("%lld", &n);
     if(primo(n))
-        printf("%lld é primo\n", n);
+        printf("%lld Eh primo\n", n);
     else
-        printf("%lld não é primo \n", n);
+        printf("%lld N eh primo \n", n);
     
 }
