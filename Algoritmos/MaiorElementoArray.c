@@ -2,7 +2,7 @@
 
 int maiorElement(int a[], int tamanho){
     int maior = a[0];
-    for (int i = 1; i <= tamanho; i++)
+    for (int i = 1; i < tamanho; i++)
     {
         if(a[i]>maior){
             maior = a[i];
@@ -12,12 +12,14 @@ int maiorElement(int a[], int tamanho){
 }
 
 int main(){
-    int tamanho, a[0];
+    int tamanho;
     scanf("%d", &tamanho);
-    for (int i = 1; i <= tamanho; i++)
+    int a[tamanho];
+    for (int i = 0; i < tamanho; i++)
     {
         scanf("%d", &a[i]);
     }
     printf("Maior elemento: %d", maiorElement(a, tamanho));
     return 0;
 }
+
