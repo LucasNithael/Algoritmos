@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-void append_int(int a[], int *tamanho, int capacidade, int x, int *erro){
+void append_int(int *a, int *tamanho, int capacidade, int x, int *erro){
     *erro = 1;
     if(*tamanho!=capacidade){
-        a[(*tamanho)++]=x;
+        *(a+*tamanho)=x;
+        (*tamanho)++;
         *erro=0;
     }
 }
@@ -20,7 +21,7 @@ int main(){
     } 
     printf("{");
         for(i = 0; i < tamanho; i++){
-            printf("%d ", a[i]);
+            printf("%d ", *(a+i));
         }
         printf("}");
     return 0;
